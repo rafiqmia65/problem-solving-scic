@@ -210,4 +210,32 @@ const capitalizeWords = (str) => {
   return capitalizedWords.join(" ");
 };
 
-console.log(capitalizeWords("hello world"));
+// console.log(capitalizeWords("hello world"));
+
+// ################################################################
+// Problem 9: Find the Factorial of a Number
+// Write a function that calculates the factorial of a number using a loop.
+
+// Example:
+
+// Input: 5
+// Output: 120
+
+const factorialNumber = (number) => {
+  if (typeof number !== "number" || number < 0) {
+    return "Please input a positive number";
+  }
+
+  if (number === 0) {
+    return 0;
+  }
+
+  let factorialNumber = 1;
+
+  for (let i = 1; i <= number; i++) {
+    factorialNumber = factorialNumber * i;
+  }
+  return factorialNumber;
+};
+
+// console.log(factorialNumber(5));
