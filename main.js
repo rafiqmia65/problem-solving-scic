@@ -109,3 +109,29 @@ const findMaxNum = (arr) => {
   return number;
 };
 // console.log(findMaxNum([5, 1, 9, 3]));
+
+// ################################################################
+// Problem 5: Remove Duplicates from an Array
+// Write a function that removes all duplicate numbers from an array.
+
+// Example:
+
+// Input: [1, 2, 2, 3, 4, 4]
+// Output: [1, 2, 3, 4]
+
+const removeDuplicatesNum = (arr) => {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return "Please Input a valid array";
+  }
+
+  let numbers = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!numbers.includes(arr[i])) {
+      numbers.push(arr[i]);
+    }
+  }
+
+  return numbers;
+};
+// console.log(removeDuplicatesNum([1, 2, 2, 3, 4, 4]))
