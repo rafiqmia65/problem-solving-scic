@@ -8,6 +8,10 @@
 // Output: "olleh"
 
 const reverseString = (string) => {
+  if (typeof string !== "string") {
+    return "Please input a string";
+  }
+
   const stringSplit = string.split("");
 
   const stringReverse = stringSplit.reverse();
@@ -29,6 +33,10 @@ const reverseString = (string) => {
 // Output: 3
 
 const vowelsCount = (string) => {
+  if (typeof string !== "string") {
+    return "Please input a string";
+  }
+
   let totalCount = 0;
 
   const vowels = "aeiou";
@@ -59,6 +67,9 @@ const vowelsCount = (string) => {
 // Output: false
 
 const palindromeCheck = (string) => {
+  if (typeof string !== "string") {
+    return "Please input a string";
+  }
   let backwardPalindrome = "";
 
   for (let i = string.length - 1; i >= 0; i--) {
@@ -72,3 +83,29 @@ const palindromeCheck = (string) => {
   }
 };
 // console.log(palindromeCheck("madam"));
+
+// ################################################################
+// Problem 4: Find the Maximum Number
+// Write a function that takes an array of numbers and returns the largest number.
+
+// Example:
+
+// Input: [5, 1, 9, 3]
+// Output: 9
+
+const findMaxNum = (arr) => {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return "Please Input a valid array";
+  }
+
+  let number = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (number < arr[i]) {
+      number = arr[i];
+    }
+  }
+
+  return number;
+};
+// console.log(findMaxNum([5, 1, 9, 3]));
