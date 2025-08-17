@@ -135,3 +135,27 @@ const removeDuplicatesNum = (arr) => {
   return numbers;
 };
 // console.log(removeDuplicatesNum([1, 2, 2, 3, 4, 4]))
+
+// ################################################################
+// Problem 6: Sum of All Numbers in an Array
+// Write a function that returns the sum of all numbers in an array.
+
+// Example:
+
+// Input: [1, 2, 3, 4]
+// Output: 10
+
+const numbersSum = (arr) => {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return "Please Input a valid array";
+  }
+
+  let totalSum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    totalSum = totalSum + arr[i];
+  }
+
+  return totalSum;
+};
+// console.log(numbersSum([1, 2, 3, 4]))
