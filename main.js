@@ -227,7 +227,7 @@ const factorialNumber = (number) => {
   }
 
   if (number === 0) {
-    return 0;
+    return 1;
   }
 
   let factorialNumber = 1;
@@ -269,6 +269,6 @@ const pingPongChallenge = () => {
     }
   }
 
-  return result.join();
+  return result.join(", ");
 };
-console.log(pingPongChallenge());
+// console.log(pingPongChallenge());
