@@ -184,4 +184,30 @@ const evenNumbers = (arr) => {
 
   return evenArray;
 };
-console.log(evenNumbers([1, 2, 3, 4, 5, 6]));
+// console.log(evenNumbers([1, 2, 3, 4, 5, 6]));
+
+// ################################################################
+// Problem 8: Capitalize First Letter of Each Word
+// Write a function that capitalizes the first letter of each word in a string.
+
+// Example:
+
+// Input: "hello world"
+// Output: "Hello World"
+
+const capitalizeWords = (str) => {
+  if (typeof str !== "string") {
+    return "Please input a string";
+  }
+
+  const words = str.split(" ");
+
+  const capitalizedWords = words.map((word) => {
+    if (word.length === 0) return "";
+    return word[0].toUpperCase() + word.slice(1);
+  });
+
+  return capitalizedWords.join(" ");
+};
+
+console.log(capitalizeWords("hello world"));
