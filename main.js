@@ -12,13 +12,13 @@ const reverseString = (string) => {
     return "Please input a string";
   }
 
-  const stringSplit = string.split("");
+  let reversed = "";
 
-  const stringReverse = stringSplit.reverse();
+  for (let i = string.length - 1; i >= 0; i--) {
+    reversed += string[i];
+  }
 
-  const stringJoin = stringReverse.join("");
-
-  return stringJoin;
+  return reversed;
 };
 
 // console.log(reverseString("hello"));
